@@ -215,7 +215,7 @@ async function renderPage(index){
   }catch(err){
     console.error(err);
     message.textContent='Не удалось загрузить журнал. Проверьте, что arashan.pdf находится рядом с index.html и интернет доступен.';
-    document.getElementById('hint').textContent=err.message||'Ошибка загрузки';
+   document.getElementById('hint').textContent=err.message||'Ошибка загрузки';
     bar.style.display='none';
   }
 })();
