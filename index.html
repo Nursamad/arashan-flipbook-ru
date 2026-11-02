@@ -18,20 +18,8 @@ button{border:1px solid #555;background:#303030;color:#fff;border-radius:7px;pad
 button:hover{background:#444}
 button:disabled{opacity:.35;cursor:default}
 main{height:calc(100dvh - 112px);min-height:300px;display:flex;align-items:center;justify-content:center;padding:12px;overflow:hidden}
-#book-wrap{
-  width:min(96vw,1200px);
-  height:100%;
-  max-height:calc(100dvh - 160px);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  overflow:hidden;
-}
-#book{
-  margin:auto;
-  max-height:100%;
-  max-width:100%;
-}
+#book-wrap{width:min(96vw,1200px);height:100%;display:flex;align-items:center;justify-content:center}
+#book{margin:auto;}
 .page{background:#fff;overflow:hidden;position:relative}
 .page canvas{display:block;width:100%;height:100%;object-fit:fill}
 .page .loading{position:absolute;inset:0;background:#fff}
@@ -87,7 +75,7 @@ footer{height:50px;display:flex;align-items:center;justify-content:center;gap:14
    const isMobile=window.matchMedia('(max-width:650px)').matches;
 const isMobile=window.matchMedia('(max-width:650px)').matches;
 const availableW=isMobile ? wrap.clientWidth-12 : Math.min(wrap.clientWidth-40, 1100);
-const availableH=Math.max(200,wrap.clientHeight-40);
+const availableH=Math.max(300,wrap.clientHeight-50);
 const fitScale=Math.min( availableW/(isMobile?base.width:base.width*2), availableH/base.height );
 const pageW=Math.round(base.widthfitScale); const pageH=Math.round(base.heightfitScale);
 
